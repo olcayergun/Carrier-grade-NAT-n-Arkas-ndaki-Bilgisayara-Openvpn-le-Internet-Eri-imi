@@ -18,8 +18,9 @@ Adımlar:
 5. server.conf dosyası '/etc/opencpn/server' dizinin altına kopyalanır.
 6. IP yönlendirmeyi hem server'da hem de lient'ta aktif etmek için:
   echo 1 > /proc/sys/net/ipv4/ip_forward
-7. client.conf dosyası client'ın altındaki '/etc/opencpn/client' dizinine kopyalanır.
-8. server kutusunda openvpn başlangıçta başlatmak için
+7. Bu ayarın açılışda aktif olması için her iki makinede '/etc/sysctl.conf' dosyasındaki ilgili satırı aktif hale getirilir.
+8. client.conf dosyası client'ın altındaki '/etc/opencpn/client' dizinine kopyalanır.
+9. server kutusunda openvpn başlangıçta başlatmak için
   systemctl restart openvpn-server@server.service
   systemctl enable openvpn-server@server.service
 10. client kutusunda openvpn başlangıçta başlatmak için
